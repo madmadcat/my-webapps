@@ -7,11 +7,11 @@
             window.location.replace("http://fengc.at");
         else
             window.setTimeout(function() {
-                $.getJSON('{{ url_for('is_done') }}', {id: {{ id }} }, ajaxCallback);
+                $.getJSON('{{ url_for('is_done') }}', {id: "{{ id }}" }, ajaxCallback);
             }, 3000);
     }
     $(document).ready(function(){
-        ajaxCallback({done=False});
+        ajaxCallback({done:false});
     });
 </script>
 </head>
